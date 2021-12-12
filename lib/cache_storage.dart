@@ -4,4 +4,4 @@
 
 library cache_storage;
 
-export 'src/cache_storage.dart';
+export 'package:cache_storage/src/cache_storage.dart';

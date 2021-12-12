@@ -5,6 +5,7 @@
 // Package imports:
 import 'package:collection/collection.dart';
 
+/// This class represents a cache whose value is linked to keys and sub keys.
 class Cache {
   /// Returns the new instance of [Cache] based on arguments.
   Cache.from({

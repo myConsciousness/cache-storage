@@ -9,6 +9,7 @@ import 'package:collection/collection.dart';
 import 'package:cache_storage/cache_storage.dart';
 import 'package:cache_storage/src/cache.dart';
 
+/// This is an implementation class of [CacheStorage].
 class CacheStorageImpl implements CacheStorage {
   /// The internal constructor for singleton.
   CacheStorageImpl._internal();
