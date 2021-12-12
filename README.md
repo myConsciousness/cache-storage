@@ -22,6 +22,10 @@
 `CacheStorage` is an open-sourced Dart library.</br>
 With `CacheStorage`, you can easily manage cache on your application.
 
+Caching in `CacheStorage` manages value with a string key and subkeys consisting of multiple strings. The cache value can be of any type, so it can be used for various use cases.
+
+With `CacheStorage`, redundant implementations of cache management are no longer necessary!
+
 ## 1.1. Introduction
 
 ### 1.1.1. Install Library
