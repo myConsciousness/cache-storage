@@ -1,0 +1,14 @@
+name: cache_storage
+description: A most easily usable cache management library in Dart. With CacheStorage, you can easily manage cache on your application.
+version: 0.0.1
+homepage: https://github.com/myConsciousness/cache-storage
+
+environment:
+  sdk: ">=2.15.0 <3.0.0"
+
+dependencies:
+
+dev_dependencies:
+  lints: ^1.0.0
+  test: ^1.16.0
+  import_sorter: ^4.6.0
