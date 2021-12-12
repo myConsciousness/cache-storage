@@ -1,39 +1,100 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+**_A most easily usable cache management library in Dart!_**
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
+[![pub package](https://img.shields.io/pub/v/cache_storage.svg)](https://pub.dev/packages/cache_storage)
+[![codecov](https://codecov.io/gh/myConsciousness/cache-storage/branch/main/graph/badge.svg?token=WITNPUI4TQ)](https://codecov.io/gh/myConsciousness/cache-storage)
+[![Analyzer](https://github.com/myConsciousness/cache-storage/actions/workflows/analyzer.yml/badge.svg)](https://github.com/myConsciousness/cache-storage/actions/workflows/analyzer.yml)
+[![Test](https://github.com/myConsciousness/cache-storage/actions/workflows/test.yml/badge.svg)](https://github.com/myConsciousness/cache-storage/actions/workflows/test.yml)
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
+<!-- TOC -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+- [1. About](#1-about)
+  - [1.1. Introduction](#11-introduction)
+    - [1.1.1. Install Library](#111-install-library)
+    - [1.1.2. Import It](#112-import-it)
+    - [1.1.3. Use CacheStorage](#113-use-cachestorage)
+  - [1.2. License](#12-license)
+  - [1.3. More Information](#13-more-information)
 
-## Features
+<!-- /TOC -->
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+# 1. About
 
-## Getting started
+`CacheStorage` is an open-sourced Dart library.</br>
+With `CacheStorage`, you can easily manage cache on your application.
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+## 1.1. Introduction
 
-## Usage
+### 1.1.1. Install Library
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+**_With Dart:_**
 
-```dart
-const like = 'sample';
+```terminal
+ dart pub add cache_storage
 ```
 
-## Additional information
+**_With Flutter:_**
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+```terminal
+ flutter pub add cache_storage
+```
+
+### 1.1.2. Import It
+
+```dart
+import 'package:cache_storage/cache_storage.dart';
+```
+
+### 1.1.3. Use CacheStorage
+
+```dart
+import 'package:cache_storage/cache_storage.dart';
+
+void main() {
+  final cacheStorage = CacheStorage.open();
+
+  // You can save any objects with key.
+  cacheStorage.save(
+    key: 'testKey',
+    value: ['spmething1', 'something2'],
+  );
+
+  // Also you can save any objects with key and sub keys.
+  cacheStorage.save(
+    key: 'testKey',
+    subKeys: ['key1', 'key2'],
+    value: 'something',
+  );
+
+  // It returns value 'something' linked to key and sub keys.
+  cacheStorage.match(key: 'testKey', subKeys: ['key1', 'key2']);
+
+  // You can delete cache by key and sub keys.
+  cacheStorage.deleteBy(key: 'testKey', subKeys: ['key1', 'key2']);
+  // You can delete all at the same time.
+  cacheStorage.delete();
+
+  // You can check storage has cache linked to
+  // key and sub keys or not.
+  if (cacheStorage.has(key: 'testKey')) {
+    // Do something.
+  }
+}
+```
+
+## 1.2. License
+
+```license
+Copyright (c) 2021, Kato Shinya. All rights reserved.
+Use of this source code is governed by a
+BSD-style license that can be found in the LICENSE file.
+```
+
+## 1.3. More Information
+
+`CacheStorage` was designed and implemented by **_Kato Shinya_**.
+
+- [Creator Profile](https://github.com/myConsciousness)
+- [License](https://github.com/myConsciousness/cache-storage/blob/main/LICENSE)
+- [API Document](https://pub.dev/documentation/cache_storage/latest/cache_storage/cache_storage-library.html)
+- [Release Note](https://github.com/myConsciousness/cache-storage/releases)
+- [Bug Report](https://github.com/myConsciousness/cache-storage/issues)
