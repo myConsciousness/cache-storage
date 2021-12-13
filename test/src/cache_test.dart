@@ -58,24 +58,4 @@ void main() {
     expect(cache.subKeys, []);
     expect(cache.value, false);
   });
-
-  test('Test toString.', () {
-    final cache = Cache.from(
-      key: 'test',
-      subKeys: [],
-      value: false,
-    );
-
-    expect(cache.toString().isNotEmpty, true);
-  });
-
-  test('Test equals.', () {
-    final cache = Cache.from(
-      key: 'test',
-      subKeys: [],
-      value: false,
-    );
-
-    expect(cache == cache, true);
-  });
 }

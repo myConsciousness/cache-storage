@@ -5,6 +5,7 @@
 import 'package:cache_storage/cache_storage.dart';
 
 void main() {
+  // Get singleton instance of cache storage.
   final cacheStorage = CacheStorage.open();
 
   // You can save any objects with key.
