@@ -83,7 +83,7 @@ abstract class CacheStorage {
     required dynamic value,
   });
 
-  /// Deleted a cache linked to [key] and [subKeys].
+  /// Deletes a cache linked to [key] and [subKeys].
   void deleteBy({
     required String key,
     List<String> subKeys,
